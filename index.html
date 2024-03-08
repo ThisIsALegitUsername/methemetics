@@ -4,31 +4,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>calc</title>
+  <title>hi</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  <titlebar><h2>Grade Calculator</h2></titlebar>
+  <inputbox-container>
+      <inputbox>
+      <h3>Assignments</h3>
+      <br>
+    <input type="text" id="assignmentpoints" name="assignmentpoints" placeholder="Earned points">
+    <input type="text" id="assignmenttotal" name="assignmenttotal" placeholder="Total points possible">
+    <!--<input type="text" id="assignmentweight" name="assignment" placeholder="Weight">!-->
+  </inputbox>
+  <inputbox>
+      <h3>Assessments</h3>
+      <br>
+    <input type="text" id="assessmentpoints" name="assessmentpoints" placeholder="Earned points">
+    <input type="text" id="assessmenttotal" name="assessmenttotal" placeholder="Total points possible">
+    <!--<input type="text" id="assessmentweight" name="assessment" placeholder="Weight">!-->
+  </inputbox>
+  </inputbox-container>
+  <button onclick="calculate();">Submit</button>
   <script src="script.js"></script>
-  <b>Enter your assignment grade:</b><br><br>
-  <label for="asne">Earned</label><br>
-  <input type="text" id="asne" name="asne"><br>
-   <label for="asnt">Total</label><br>
-  <input type="text" id="asnt" name="asnt"><br><br>
-    <b>Enter your assessment grade:</b><br><br>
-  <label for="asse">Earned</label><br>
-  <input type="text" id="asse" name="asse"><br>
-   <label for="asst">Total</label><br>
-  <input type="text" id="asst" name="asst"><br><br>
-    <b>What will my grade be after this assignment?</b><br><br>
-  <label for="fasne">Earned</label><br>
-  <input type="text" id="fasne" name="fasne"><br>
-   <label for="fasnt">Total</label><br>
-  <input type="text" id="fasnt" name="fasnt"><br><br>
-  <button onclick="calcSkyward()">Calculate!</button>
-  
-  <h4 id="score">Click calculate to see your score!</h4>
-  
+  <br>
+  <br>
+  <div id="result"></div>
 </body>
 
 </html>
