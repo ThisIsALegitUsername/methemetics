@@ -1,19 +1,20 @@
-function calcSkywardCustom(asme, asmt, asie, asit){
-  var asmp = asme/asmt*0.8;
-  var asip= asie/asit*0.2;
-  return asmp + asip;
+let oui = false;
+
+function calculate() {
+  let asp = document.getElementById("assignmentpoints").value;
+  let ast = document.getElementById("assignmenttotal").value;
+  let assp = document.getElementById("assessmentpoints").value;
+  let asst = document.getElementById("assessmenttotal").value;
+
+  let ass = asp/ast*0.2;
+  let asss = assp/asst*0.8;
+
+  console.log(Math.round((ass+asss)*10000)/100);
+  document.getElementById("result").textContent = "Your percent grade is " + Math.round((ass+asss)*10000)/100 + "%";
 }
 
-function calcSkyward() {
-  var asne = document.getElementById("asne").value;
-  var asnt = document.getElementById("asnt").value;
-  var asse = document.getElementById("asse").value;
-  var asst = document.getElementById("asst").value;
-  var fasne = document.getElementById("fasne").value;
-  var fasnt = document.getElementById("fasnt").value;
-
-  var astotal = ((asne+fasne)/(asnt+fasnt))*0.2;
-  var asstotal = asse/asst*0.8;
-
-  document.getElementById("score").innerText = "Your new grade after that assignment will be " + astotal+asstotal*100 + "%!";
-}
+document.addEventListener('keypress', function(event){
+  if(event.key == 13){
+    calculate();
+  }
+});
